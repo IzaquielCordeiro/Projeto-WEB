@@ -1,0 +1,309 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>API</h2>
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcToolbarRowDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcToolbarRow]</span>
+  
+</p><p class="blox-docs-class-description">A directive for a toolbar row. The content of a toolbar should always be embedded
+in toolbar rows. So this directive should always be used as a direct child of an
+<code>MdcToolbarDirective</code>. Multiple rows are allowed, which rows are visible
+depends on the style of the toolbar, and the scroll position of the content of
+the page.</p>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcToolbarSectionDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcToolbarSection]</span>
+  
+</p><p class="blox-docs-class-description">A directive for a toolbar section. A toolbar row should always be composed of toolbar sections.
+Thus, this directive should always be used as a direct child of an <code>MdcToolbarRowDirective</code>.
+Multiple sections, with different alignment options, are allowed per row.</p><table class="blox-docs-properties-table">
+    <tr class="blox-docs-properties-header-row">
+      <th class="blox-docs-properties-th">Property</th>
+      <th class="blox-docs-properties-th">Description</th>
+    </tr>
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      alignStart
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Make the section align to the start of the toolbar row (default alignment is to the
+center).</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      alignEnd
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Make the section align to the end of the toolbar row (default alignment is to the
+center).</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      shrinkToFit
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Toolbar sections are laid out using flexbox. Each section will take up an equal amount
+of space within the toolbar by default. To accomodate very long sections (e.g. a  long title),
+set <code>shrinkToFit</code> to a value other than false on the other sections in the row.</p>
+</td>
+</tr>
+
+    
+  </table>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcToolbarTitleDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcToolbarTitle]</span>
+  
+</p><p class="blox-docs-class-description">This directive adds extra styling to toolbar text that represents the title of the toolbar.
+The directive should be a child of an <code>MdcToolbarSectionDirective</code>.</p>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcToolbarIcon</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcToolbarIcon]</span>
+  
+</p><p class="blox-docs-class-description">This directive is typically used to style icons placed in the toolbar placed
+on the right hands side. Use <code>MdcToolbarMenuIcon</code> for the 'main'
+icon, usually placed to the left of the menu.
+The directive should be a child of an <code>MdcToolbarSectionDirective</code>.</p>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcToolbarMenuIcon</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcToolbarMenuIcon]</span>
+  
+</p><p class="blox-docs-class-description">This directive is typically used to style the main toolbar icon, usually placed to
+the left of the toolbar title. For other icons in the toolbar, use
+<code>MdcToolbarIcon</code> instead.</p>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcToolbarFixedAdjustDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcToolbarFixedAdjust]</span>
+  
+</p><span class="blox-docs-class-export-label">Exported as:</span>
+<span class="blox-docs-class-export-name">mdcFixedAdjust</span><p class="blox-docs-class-description">For <code>isFixed</code> toolbars, this directive should be put on the page's
+content wrapper element, and the exported directive should be assigned to the
+<code>fixedAdjust</code> property of the <code>MdcToolbarDirective</code>.
+This will make the toolbar aware of the content wrapper, so that the top marging
+can be adjusted based on the style of the toolbar, and the scroll of the content.</p>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcToolbarDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcToolbar]</span>
+  
+</p><p class="blox-docs-class-description">A directive for creating toolbars. All content inside a toolbar should be
+embedded inside <code>MdcToolbarRowDirective</code> elements.</p><table class="blox-docs-properties-table">
+    <tr class="blox-docs-properties-header-row">
+      <th class="blox-docs-properties-th">Property</th>
+      <th class="blox-docs-properties-th">Description</th>
+    </tr>
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      fixedAdjust
+    </p>
+    <code class="blox-docs-property-type">MdcToolbarFixedAdjustDirective</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Assign a <code>MdcToolbarFixedAdjustDirective</code> put on the main
+content of the page. Required for <code>isFixed</code> toolbars,
+to properly layout the toolbar and the content when users scroll.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-output-marker">
+          @Output()</div><p class="blox-docs-property-name">
+      expansionRatio
+    </p>
+    <code class="blox-docs-property-type">new EventEmitter&lt;number&gt;()</code>
+  </td>
+  <td class="blox-docs-property-description"><p>A number between [0, 1] that represents the <em>ratio of flexible space
+that has already been collapsed divided by the total amount of flexible space</em>
+for flexible toolbars.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isFixed
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>If set to a value other than false, the toolbar will be fixed to the top of the
+screen (or viewport).</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isWaterfall
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>If set to a value other than false, and used in combination with <code>isFixed</code>
+the toolbar will become a waterfall toolbar.
+A waterfall toolbar is initially static and has no elevation, but when content scrolls under it,
+the toolbar becomes fixed and gains elevation.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isFixedLastrowOnly
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>If set to a value other than false, fixed toolbars will anchor only the last row to the top.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isFlexible
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>A flexible toolbar changes height when the user scrolls. Flexible behavior is highly customizable,
+quoted from the upstream <code>mdc-toolbar</code> documentation:</p>
+<blockquote>
+We only define the change of flexible space size without making further assumptions.
+But we do recommend the height of flexible space should be an integral number of
+toolbar row height and provide a easier way for user to customize height.
+Users can adjust the height of flexible space through sass variable
+<code>$mdc-toolbar-ratio-to-extend-flexible</code> or css variable
+<code>--mdc-toolbar-ratio-to-extend-flexible</code>.
+</blockquote></td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isFlexibleDefaultBehavior
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>A default behavior for flexible toolbars.
+For more information see:
+<a href="https://github.com/material-components/material-components-web/tree/v0.23.0/packages/mdc-toolbar#flexible-toolbar-requires-javascript">
+Flexible Toolbar documention
+</a>.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      viewport
+    </p>
+    <code class="blox-docs-property-type">HTMLElement</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Assign any <code>HTMLElement</code> to this property to place a flexible toolbar fixed to that element
+(usually the parent container), instead of to the browser window. This property is mainly added for creating nice
+demos of toolbars embedded inside oher pages (such as on this documentation page). It is not recommended to use
+this for a real application toolbar. The position is kept fixed to the container element by listening
+for scroll/resize events, and using javascript to recompute the position. This may influence the smoothness
+of the scrolling experience, especially on mobile devices.
+The viewport element should have css styling: <code>position: relative</code>, and should have a fixed
+height.</p>
+</td>
+</tr>
+
+    
+  </table>
+
+
+
+
+
+
+  

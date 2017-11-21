@@ -1,0 +1,104 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>API</h2>
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcLinearProgressDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcLinearProgress]</span>
+  
+</p><p class="blox-docs-class-description">Directive for creating a Material Design linear progress indicator.
+The current implementation will add and manage all DOM child elements that
+are required for the wrapped <code>mdc-linear-progress</code> component.
+Future implementations will also support supplying (customized)
+DOM children.</p><table class="blox-docs-properties-table">
+    <tr class="blox-docs-properties-header-row">
+      <th class="blox-docs-properties-th">Property</th>
+      <th class="blox-docs-properties-th">Description</th>
+    </tr>
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isIndeterminate
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Puts the progress indicator in &#39;indeterminate&#39; state, signaling
+that the exact progress on a measured task is not known.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isReversed
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Reverses the direction of the linear progress indicator.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      progressValue
+    </p>
+    <code class="blox-docs-property-type">number | string</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Set the progress, the value should be between [0, 1].</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      bufferValue
+    </p>
+    <code class="blox-docs-property-type">number | string</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Set the buffer progress, the value should be between [0, 1].</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isClosed
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>When set to true this closes (animates away) the progress bar,
+when set to false this opens (animates into view) the progress bar.</p>
+</td>
+</tr>
+
+    
+  </table>
+
+
+
+
+
+
+  

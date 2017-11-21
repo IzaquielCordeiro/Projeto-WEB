@@ -1,0 +1,162 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>API</h2>
+    <h3 class="blox-docs-service-h">Service: <code>MdcSnackbarService</code></h3>
+<p class="blox-docs-class-description">A service for showing spec-aligned material design snackbar/toast messages.</p><table class="blox-docs-properties-table">
+    <tr class="blox-docs-properties-header-row">
+      <th class="blox-docs-properties-th">Property</th>
+      <th class="blox-docs-properties-th">Description</th>
+    </tr>
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><p class="blox-docs-property-name">
+      startAligned
+    </p>
+    <code class="blox-docs-property-type">boolean</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Set this property to true to show snackbars start-aligned instead of center-aligned. Desktop and tablet only.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><p class="blox-docs-property-name">
+      dismissesOnAction
+    </p>
+    <code class="blox-docs-property-type">boolean</code>
+  </td>
+  <td class="blox-docs-property-description"><p>By default the snackbar will be dimissed when the user presses the action button.
+If you want the snackbar to remain visible until the timeout is reached (regardless of
+whether the user pressed the action button or not) you can set the dismissesOnAction
+property to false.</p>
+</td>
+</tr>
+
+    
+  </table>
+
+
+<h4 class="blox-docs-methods-h">Methods</h4>
+  
+    <table class="blox-docs-method-table">
+  <thead>
+    <tr class="blox-docs-method-name-row">
+      <th colspan="2" class="blox-docs-method-name-cell">show(message)
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="blox-docs-method-description-row">
+      <td colspan="2" class="blox-docs-method-description-cell">
+        <p>Show a snackbar/toast message. If a snackbar message is already showing, the new
+message will be queued to show after earlier message have been shown.
+The returned <code>MdcSnackbarRef</code> provides methods to subscribe to action clicks.</p>
+
+      </td>
+    </tr>
+  </tbody><thead>
+    <tr class="blox-docs-method-parameters-header-row">
+      <th colspan="2" class="blox-docs-method-parameters-header-cell">Parameters</th>
+    </tr>
+  </thead>
+  <tbody>
+    
+    <tr class="blox-docs-method-parameter-row">
+      <td class="blox-docs-method-parameter-cell">
+        <p class="blox-docs-method-parameter-name">
+          message</p>
+        <code class="blox-docs-method-parameter-type"></code>
+      </td>
+      <td class="blox-docs-method-parameter-description-cell">
+        <p>Queue a snackbar message to show.</p>
+
+      </td>
+    </tr>
+    
+  </tbody><thead>
+    <tr class="blox-docs-method-returns-header-row">
+      <th colspan="2" class="blox-docs-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="blox-docs-method-returns-type-cell">
+        <code class="blox-docs-method-returns-type">MdcSnackbarRef</code>
+      </td>
+      <td class="blox-docs-method-returns-description-cell">
+        
+      </td>
+    </tr>
+  </tbody></table>
+
+  
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Interface: <code>MdcSnackbarMessage</code></h3><p class="blox-docs-class-description">The interface accepted by <code>MdcSnackbarService::show()</code>.</p>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Interface: <code>MdcSnackbarRef</code></h3><p class="blox-docs-class-description">This class provides information about a posted snackbar message.
+It can also be used to subscribe to action clicks.</p>
+
+
+<h4 class="blox-docs-methods-h">Methods</h4>
+  
+    <table class="blox-docs-method-table">
+  <thead>
+    <tr class="blox-docs-method-name-row">
+      <th colspan="2" class="blox-docs-method-name-cell">action()
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="blox-docs-method-description-row">
+      <td colspan="2" class="blox-docs-method-description-cell">
+        <p>Subscribe to this observable to be informed when a user clicks the action
+for the shown snackbar. Note that the observable will complete when the snackbar
+disappears from screen, so there is no need to unsubscribe.</p>
+
+      </td>
+    </tr>
+  </tbody><thead>
+    <tr class="blox-docs-method-returns-header-row">
+      <th colspan="2" class="blox-docs-method-returns-header-cell">Returns</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="blox-docs-method-returns-type-cell">
+        <code class="blox-docs-method-returns-type">Observable&lt;void&gt;</code>
+      </td>
+      <td class="blox-docs-method-returns-description-cell">
+        
+      </td>
+    </tr>
+  </tbody></table>
+
+  
+
+
+
+  
