@@ -1,0 +1,189 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>API</h2>
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcIconToggleIconDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcIconToggleIcon]</span>
+  
+</p><p class="blox-docs-class-description">Directive for an icon nested inside a <code>MdcIconToggleDirective</code>.
+This directive is only needed when the icon font uses CSS pseudo-elements in order
+to provide the icon. This is how Font Awesome, and many other icon font libraries
+provide the icons.
+For icon fonts that don't use pseudo elements (such as the Material Design Icons from Google),
+this directive is not necessary.</p>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcIconToggleDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcIconToggle]</span>
+  
+</p><p class="blox-docs-class-description">Directive for creating a Material Design icon toggle button.
+The icon toggle is fully accessible, and works with any icon font.
+When the icon font uses CSS pseudo-elements in order to display the icon,
+embed an <code>MdcIconToggleIconDirective</code> inside this directive for
+the actual icon. (Otherwise the pseudo-elements used for showing the icon
+will interfere with the pseudo-elements this directive uses for showing
+ripple styles).</p><table class="blox-docs-properties-table">
+    <tr class="blox-docs-properties-header-row">
+      <th class="blox-docs-properties-th">Property</th>
+      <th class="blox-docs-properties-th">Description</th>
+    </tr>
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-output-marker">
+          @Output()</div><p class="blox-docs-property-name">
+      isOnChange
+    </p>
+    <code class="blox-docs-property-type">EventEmitter&lt;boolean&gt;</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Event emitted when the state of the icon changes (for example when a user clicks
+the icon).</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      isOn
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>The current state of the icon (true for on/pressed, false for off/unpressed).</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      labelOn
+    </p>
+    <code class="blox-docs-property-type">string</code>
+  </td>
+  <td class="blox-docs-property-description"><p>The aria-label to use for the on/pressed state of the icon.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      labelOff
+    </p>
+    <code class="blox-docs-property-type">string</code>
+  </td>
+  <td class="blox-docs-property-description"><p>The aria-label to use for the off/unpressed state of the icon.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      iconOn
+    </p>
+    <code class="blox-docs-property-type">string</code>
+  </td>
+  <td class="blox-docs-property-description"><p>The icon to use for the on/pressed state of the icon.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      iconOff
+    </p>
+    <code class="blox-docs-property-type">string</code>
+  </td>
+  <td class="blox-docs-property-description"><p>The icon to use for the off/unpressed state of the icon.</p>
+</td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      iconIsClass
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>Some icon fonst (such as Font Awesome) use CSS class names to select the icon to show.
+Others, such as the Material Design Icons from Google use ligatures (allowing selection of
+the icon by using their textual name). When <code>iconIsClass</code> is true, the directive
+assumes <code>iconOn</code>, and <code>iconOff</code> represent class names. When
+<code>iconIsClass</code> is false, the directive assumes the use of ligatures.</p>
+<p>
+When <code>iconIsClass</code> is not assigned, the directive bases its decision on whether
+or not an embedded <code>MdcIconToggleIconDirective</code> is used.
+In most cases you won&#39;t need to set this input, as the default based on an embedded
+<code>MdcIconToggleIconDirective</code> is typically what you need.
+</p></td>
+</tr>
+
+    
+      <tr class="blox-docs-properties-row">
+  <td class="blox-docs-properties-name-cell"><div class="blox-docs-input-marker">
+          @Input()</div><p class="blox-docs-property-name">
+      disabled
+    </p>
+    <code class="blox-docs-property-type">any</code>
+  </td>
+  <td class="blox-docs-property-description"><p>To disable the icon toggle, set this input to true.</p>
+</td>
+</tr>
+
+    
+  </table>
+
+
+
+
+
+
+  
+    <h3 class="blox-docs-directive-h">Directive: <code>MdcFormsIconToggleDirective</code></h3>
+<p class="blox-docs-directive-selectors">
+  <span class="blox-docs-class-selector-label">Selector:</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcIconToggle][formControlName]</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcIconToggle][formControl]</span>
+  
+    <span class="blox-docs-class-selector-name">[mdcIconToggle][ngModel]</span>
+  
+</p><p class="blox-docs-class-description">Directive for adding Angular Forms (<code>ControlValueAccessor</code>) behavior to an
+<code>MdcIconToggleDirective</code>. Allows the use of the Angular Forms API with
+icon toggles, e.g. binding to <code>[(ngModel)]</code>, form validation, etc.</p>
+
+
+
+
+
+
+  
