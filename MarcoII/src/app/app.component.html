@@ -1,5 +1,99 @@
-<button mdcButton raised>
-  Botão de Teste
-</button>
 
-<blox-snippet-list></blox-snippet-list>
+<div mdcToolbarRow >
+  <section mdcToolbarSection alignStart>
+        <span>
+          <a href="javascript:void(0)" mdcToolbarMenuIcon><i class="material-icons">&#xE5C4;</i></a>
+        </span>
+    <span mdcToolbarTitle>Connect</span>
+  </section>
+  <section mdcToolbarSection alignEnd>
+    <a href="javascript:void(0)" mdcToolbarIcon class="material-icons" aria-label="Download" alt="Download">file_download</a>
+    <a href="javascript:void(0)" mdcToolbarIcon class="material-icons" aria-label="Print this page" alt="Print this page">print</a>
+    <a href="javascript:void(0)" mdcToolbarIcon class="material-icons" aria-label="Bookmark this page" alt="Bookmark this page">more_vert</a>
+  </section>
+</div>
+
+<div mdcCard>
+
+    <div mdcCardHorizontal >
+
+      <section mdcCardPrimary>
+        <h1 mdcCardTitle large>Cadastre-se no Connect</h1>
+        <h2 mdcCardSubtitle>Preencha os campos abaixo</h2>
+      </section>
+
+      <img mdcCardMediaItem sizeFactor="2" src="https://s-media-cache-ak0.pinimg.com/originals/4b/47/40/4b474025475b969dcf0e7d89c2d3d57a.png">
+
+    </div>
+
+    <div mdcTextField boxed="true">
+      <i mdcTextFieldIcon class="material-icons">account_circle</i>
+      <input mdcTextFieldInput required="true" type="email"/>
+      <label mdcTextFieldLabel>E-mail</label>
+    </div>
+  <p mdcTextFieldHelptext #input2Help="mdcHelptext" isValidation>
+    <span *ngIf="input2.errors?.required">Insira um E-mail válido</span>
+  </p>
+
+    <div mdcTextField boxed="true">
+      <i mdcTextFieldIcon class="material-icons">email</i>
+      <input mdcTextFieldInput required="true" type="email"/>
+      <label mdcTextFieldLabel>Confirme seu E-mail</label>
+    </div>
+  <p mdcTextFieldHelptext #input2Help="mdcHelptext" isValidation>
+    <span *ngIf="input2.errors?.required">Insira um E-mail válido</span>
+  </p>
+
+  <div mdcTextField boxed="true">
+    <i mdcTextFieldIcon class="material-icons">account_box</i>
+    <input mdcTextFieldInput required="true" type="password" minlength="8"/>
+    <label mdcTextFieldLabel>Senha</label>
+  </div>
+  <p mdcTextFieldHelptext #input2Help="mdcHelptext" isValidation>
+    <span *ngIf="input2.errors?.required">Este campo é obrigatório</span>
+    <span *ngIf="input2.errors?.minlength">Mínimo 8 carateres</span>
+  </p>
+
+  <div mdcTextField boxed="true">
+    <i mdcTextFieldIcon class="material-icons">account_box</i>
+    <input mdcTextFieldInput required="true" type="password" #input2="ngModel" [(ngModel)]="field2" minlength="8"/>
+    <label mdcTextFieldLabel>Confirme sua Senha</label>
+  </div>
+  <p mdcTextFieldHelptext #input2Help="mdcHelptext" isValidation>
+    <span *ngIf="input2.errors?.required">Este campo é obrigatório</span>
+    <span *ngIf="input2.errors?.minlength">Mínimo 8 carateres</span>
+  </p>
+
+
+  <div mdcTextField boxed="true">
+    <i mdcTextFieldIcon class="material-icons">face</i>
+    <input mdcTextFieldInput required="true" type="text"/>
+    <label mdcTextFieldLabel>Nascimento</label>
+  </div>
+  <p mdcTextFieldHelptext #input2Help="mdcHelptext" [isPersistent]="persistent">
+    <span>Insira a data de seu nascimento</span>
+  </p>
+
+  <div mdcTextField boxed="true">
+    <i mdcTextFieldIcon class="material-icons">assignment_ind</i>
+    <input mdcTextFieldInput required="true" type="text"/>
+    <label mdcTextFieldLabel>Profissão</label>
+  </div>
+  <p mdcTextFieldHelptext #input2Help="mdcHelptext" [isPersistent]="persistent">
+    <span>Insira a sua profissão.</span>
+  </p>
+
+
+  <button mdcFab [exited]="exit" class="material-icons">
+    <span mdcFabIcon>done_all</span>
+  </button>
+    <section>
+    <div mdcFormField>
+      <div mdcCheckbox>
+        <input mdcCheckboxInput type="checkbox" [(ngModel)]="exit"/>
+      </div>
+      <label mdcFormFieldLabel>Exit Buttons</label>
+    </div>
+  </section>
+
+</div>
